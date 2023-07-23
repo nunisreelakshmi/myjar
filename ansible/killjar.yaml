@@ -1,0 +1,8 @@
+---
+- name: kiil a jar file
+  hosts: slave
+  remote_user: root
+  become: yes
+  task:
+    - name: 
+      shell: ps -ef | grep spring-boot-hello-world-example-0.0.1-SNAPSHOT.jar | grep -v grep | awk {'print$2'} | xargs kill -9
