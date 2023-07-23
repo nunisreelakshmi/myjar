@@ -1,6 +1,6 @@
 ---
 - name: Deploye a jar file
-  host: slave
+  hosts: slave
   remote_user: root
   become: yes
   tasks: 
