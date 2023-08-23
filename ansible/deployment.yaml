@@ -7,8 +7,8 @@
     - name: copy the file
       copy:
         src: /var/lib/jenkins/workspace/jarfile/target/spring-boot-hello-world-example-0.0.1-SNAPSHOT.jar
-        dest: /home/pavan
+        dest: /home/ec2-user/ansible-manual
     - name: deploye a jar
       shell: nohup java -jar spring-boot-hello-world-example-0.0.1-SNAPSHOT.jar &
       args:
-        chdir: /home/pavan
+        chdir: /home/ec2-user/ansible-manual
